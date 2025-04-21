@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tienda {
+	private static final double descuero_25_prociento = 0.25;
 	private static final int DESCUENTO_10_porciento = 0;
 	private List <Producto> productos;
 	
@@ -59,7 +60,7 @@ public class Tienda {
 		if (precioTotalStock >= 50 && precioTotalStock <= 100) {
 		    descuento = 0.10;  // 10% de descuento
 		} else if (precioTotalStock > 100) {
-		    descuento = 0.25;  // 25% de descuento
+		    descuento = descuero_25_prociento;  // 25% de descuento
 		}
 		return descuento;
 	}
