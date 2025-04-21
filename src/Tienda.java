@@ -28,12 +28,7 @@ public class Tienda {
 	                double precioTotalStock = producto.getPrecio() * cantidadVendida;
 	                double descuento = 0;
 
-	                // Aplicamos descuento según el total
-	                if (precioTotalStock >= 50 && precioTotalStock <= 100) {
-	                    descuento = 0.10;  // 10% de descuento
-	                } else if (precioTotalStock > 100) {
-	                    descuento = 0.25;  // 25% de descuento
-	                }
+	                descuento = calculoDecuentoVenta(precioTotalStock, descuento);
 
 	                // Calculamos el total con el descuento
 	                double totalConDescuento = precioTotalStock - (precioTotalStock * descuento);
@@ -56,6 +51,16 @@ public class Tienda {
 	    if (!productoEncontrado) {
 	        System.out.println("Producto "+nombreProducto +" no encontrado.");
 	    }
+	}
+
+	private double calculoDecuentoVenta(double precioTotalStock, double descuento) {
+		// Aplicamos descuento según el total
+		if (precioTotalStock >= 50 && precioTotalStock <= 100) {
+		    descuento = 0.10;  // 10% de descuento
+		} else if (precioTotalStock > 100) {
+		    descuento = 0.25;  // 25% de descuento
+		}
+		return descuento;
 	}
 
 	public void mostrarInventario() {
