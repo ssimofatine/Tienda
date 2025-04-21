@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tienda {
+	private static final int DESCUENTO_10_porciento = 0;
 	private List <Producto> productos;
 	
 	public Tienda() {
@@ -26,7 +27,7 @@ public class Tienda {
 	            // Verificamos si hay suficiente stock
 	            if (producto.getStock() >= cantidadVendida) {
 	                double precioTotalStock = producto.getPrecio() * cantidadVendida;
-	                double descuento = 0;
+	                double descuento = DESCUENTO_10_porciento;
 
 	                descuento = calculoDecuentoVenta(precioTotalStock, descuento);
 
