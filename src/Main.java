@@ -22,9 +22,9 @@ public class Main {
         
         // Realizar ventas
         System.out.println("\nVendiendo productos...");
-        tienda.venderProducto("Camiseta", 3);  
-        tienda.venderProducto("Camisa", 2);  
-        tienda.venderProducto("Calzoncillos", 2); 
+        tienda.totalVenta("Camiseta", 3);  
+        tienda.totalVenta("Camisa", 2);  
+        tienda.totalVenta("Calzoncillos", 2); 
 
         // Mostrar inventario después de las ventas
         System.out.println("\nInventario después de las ventas:");

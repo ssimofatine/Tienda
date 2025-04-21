@@ -15,7 +15,7 @@ public class Tienda {
 	}
 	
 	// Vender producto
-	public void venderProducto(String nombreProducto, int cantidadVendida) {
+	public void totalVenta(String nombreProducto, int cantidadVendida) {
 	    boolean productoEncontrado = false;  // Variable para verificar si se encontró el producto
 	    for (Producto producto : productos) {
 	        	        
