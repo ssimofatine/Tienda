@@ -1,14 +1,30 @@
 public class Producto {
+	
+	/**
+	 * atrobitos
+	 */
 
 	private String nombre;
 	private double precio;
 	private int stock;
+	
+	/**
+	 * constrctur
+	 * @param nombre
+	 * @param precio
+	 * @param stock
+	 */
 	
 	public Producto (String nombre, double precio, int stock) {
 		this.nombre=nombre;
 		this.precio=precio;
 		this.stock=stock;
 	}
+	
+	/**
+	 * getter y setter
+	 * @return
+	 */
 	
 	public String getNombre() {
 		return nombre;
