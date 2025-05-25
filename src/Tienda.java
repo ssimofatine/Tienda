@@ -57,10 +57,14 @@ public class Tienda {
 		double descuento = 0;
 
 		// Aplicamos descuento según el total
-		if (totalVenta >= 50 && totalVenta <= 100) {
+		boolean descuentoInicial = totalVenta >= 50 && totalVenta <= 100;
+		if (descuentoInicial) {
 		    descuento = DESCUENTO_10_PORCIENTO;  // 10% de descuento
-		} else if (totalVenta > 100) {
-		    descuento = DESCUENTO_25_PORCIENTO;  // 25% de descuento
+		} else {
+			boolean descuentoAvanzado = totalVenta > 100;
+			if (descuentoAvanzado) {
+			    descuento = DESCUENTO_25_PORCIENTO;  // 25% de descuento
+			}
 		}
 		return descuento;
 	}
