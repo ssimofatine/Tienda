@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Tienda {
 	private static final double descuero_25_prociento = 0.25;
-	private static final int DESCUENTO_10_porciento = 0;
+	private static final double DESCUENTO_10_porciento = 0.10;
 	private List <Producto> productos;
 	
 	public Tienda() {
@@ -28,7 +28,7 @@ public class Tienda {
 	            // Verificamos si hay suficiente stock
 	            if (producto.getStock() >= cantidadVendida) {
 	                double precioTotalStock = producto.getPrecio() * cantidadVendida;
-	                double descuento = DESCUENTO_10_porciento;
+	                double descuento =0;
 
 	                descuento = calculoDecuentoVenta(precioTotalStock, descuento);
 
@@ -58,7 +58,7 @@ public class Tienda {
 	private double calculoDecuentoVenta(double precioTotalStock, double descuento) {
 		// Aplicamos descuento según el total
 		if (precioTotalStock >= 50 && precioTotalStock <= 100) {
-		    descuento = 0.10;  // 10% de descuento
+		    descuento = DESCUENTO_10_porciento;  // 10% de descuento
 		} else if (precioTotalStock > 100) {
 		    descuento = descuero_25_prociento;  // 25% de descuento
 		}
