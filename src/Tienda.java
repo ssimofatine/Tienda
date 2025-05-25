@@ -99,11 +99,11 @@ public class Tienda {
 	
     // Calcular valor total del inventario
     public double calcularValorInventario() {
-        double total = 0;
+        double precioTotalStock = 0;
         for (Producto producto : productos) {
-            total += producto.getPrecio() * producto.getStock();
+            precioTotalStock += producto.getPrecio() * producto.getStock();
         }
-        return total;
+        return precioTotalStock;
     }
 	
 }//fin clase
