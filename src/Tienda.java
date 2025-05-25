@@ -27,19 +27,19 @@ public class Tienda {
 	            
 	            // Verificamos si hay suficiente stock
 	            if (producto.getStock() >= cantidadVendida) {
-	                double precioTotalStock = producto.getPrecio() * cantidadVendida;
+	                double totalVenta = producto.getPrecio() * cantidadVendida;
 	                double descuento =0;
 
-	                descuento = calculoDecuentoVenta(precioTotalStock, descuento);
+	                descuento = calculoDecuentoVenta(totalVenta, descuento);
 
 	                // Calculamos el total con el descuento
-	                double totalConDescuento = precioTotalStock - (precioTotalStock * descuento);
+	                double totalConDescuento = totalVenta - (totalVenta * descuento);
 	                
 	                // Reducimos el stock del producto
 	                producto.reducirStock(cantidadVendida);    
 	                // Mostramos venta por pantalla
 	                System.out.println("Venta "+ producto.getNombre()+" realizada. ");
-	                System.out.println("Subtotal : " + precioTotalStock);
+	                System.out.println("Subtotal : " + totalVenta);
 	                System.out.println("Decuento aplicado: "+descuento);
 	                System.out.println("Total : " + totalConDescuento);
 	            } else {
